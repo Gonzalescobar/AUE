@@ -10,12 +10,17 @@
 
 @layer utilities {
   .spin1deg{
-    animation: spin1g 3s infinite alternate;
+    animation: spin1g 9s infinite;
 
   }
   .-spin1deg{
-    animation: spin1g 3s infinite alternate-reverse;
+    animation: spin1g 9s infinite reverse;
   }
+}
+
+html{
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 
@@ -23,19 +28,18 @@
 
 @keyframes spin1g {
   0%{
-    transform: rotate(1deg);
-    transform: rotate3d(1,1,0,45deg);
+    transform: rotate3d(1,1,1,44deg);
   }
-  33%{
-    transform: rotate(-1deg);
-    transform: rotate3d(0,1,1,-45deg);
+  25%{
+    transform: rotate3d(1,1,1,-44deg);
   }
-  66%{
-    transform: rotate(1deg);
-    transform: rotate3d(1,0,1,45deg);
+  50%{
+    transform: rotate3d(1,1,1, 360deg);
   }
-  66%{
-    transform: rotate(1deg);
-    transform: rotate3d(0,0,1,-45deg);
+  75%{
+    transform: rotate3d(1,1,1, -44deg);
+  }
+  100%{
+    transform: rotate3d(1,1,1, 44deg);
   }
 }
