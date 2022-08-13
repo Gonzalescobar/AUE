@@ -186,7 +186,10 @@ function PDFSS(){
       <div className='absolute select-none z-0 flex top-[33vh] left-[calc(50vw-17vh)]'>
      <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
      </div>
-     <div className='absolute select-none z-0 flex top-[33vh] left-[calc(20vw-17vh)]'>
+     <div className='absolute select-none z-0 hidden md:flex top-[33vh] left-[calc(20vw-17vh)]'>
+     <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
+     </div>
+     <div className='absolute select-none z-0 hidden md:flex top-[33vh] right-[calc(20vw-17vh)]'>
      <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
      </div>
     <a href={pdf1} className='h-[17vh] z-20 self-center bg-[#eeeeee40] hover:bg-[#eeeeee70] rounded-[2vh] p-[2vh] flex flex-col m-[3vh] justify-center w-[33vh] max-w-[90vw] text-center'>Survival Tips</a>
