@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {Overview, App} from './App';
+import {Overview, App, PDFSS} from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {register} from './serviceWorkerRegistration';
 
@@ -28,6 +28,7 @@ root.render(
   <Routes>
   <Route path="/overview" element={<Overview/>} />
   <Route path="/" element={<App/>} />
+  <Route path="/m" element={<PDFSS/>} />
 </Routes>
 </BrowserRouter>
 );

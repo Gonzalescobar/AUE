@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import pdf1 from './04_Survival_Tips.pdf'
+import pdf2 from './field_guide_wildlife_diseases.pdf'
+import pdf3 from './WJ-Friday-15th-January_-Survival-Guide.pdf'
+import {useNavigate} from 'react-router-dom'
 
 const collision = " Monkey Pox & COVID 19"
 
@@ -138,6 +142,9 @@ async function returnHashNumberWeighted(ProbabilityString) {
 
 
 function App() {
+
+  const navigatee = useNavigate();
+
 React.useEffect(() => {
   const getProbability = setInterval(async () => {
     let ProbabilityString = new Date(Math.floor(Math.floor(Date.now()) / 1000) * 1000).toUTCString().replace(" GMT", "")
@@ -151,9 +158,6 @@ React.useEffect(() => {
      <div className='absolute select-none z-0 flex top-[5vh] left-[calc(50vw-17vh)]'>
      <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/ko27I/MAEoE-ko27I/1/s.png"/>
      </div>
-     <div className='absolute select-none z-0 flex top-[5vh] left-[calc(50vw-17vh)]'>
-     <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/ko27I/MAEoE-ko27I/1/s.png"/>
-     </div>
      <div className='w-screen font-["Cherry_Swash"] flex flex-col z-20 relative'>
      <div onClick={()=>{document.getElementById("Hs").scrollIntoView()}} className='select-none snap-center h-screen w-screen flex flex-col justify-center'>
       <p className='mt-[5vh] text-[#E9C46A] text-center max-w-[80vw] select-none font-[Cinzel] font-thin self-center text-[5vh] md:text-[7vh] mb-[5vh]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</p>
@@ -161,10 +165,10 @@ React.useEffect(() => {
       </div>
       <div id="Hs" className='snap-start overflow-y-scroll h-screen w-screen flex flex-col justify-start'>
       <p className='select-all font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is inmninent but there are ways to preapare for the <a className='font-[Cinzel] font-thin text-[#E9C46A]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a></p>
-      <div className='mb-[7vh] grid lg:grid-cols-3 grid-cols-1 mt-[7vh] h-[17vh] self-center w-[90vw] bg-indigo-400'>
-        <p className='text-[4vmin] place-self-center'>RCE formula</p>
-        <p className='text-[4vmin] place-self-center'>AUE guides</p>
-        <p className='text-[4vmin] place-self-center'>Information</p>
+      <div className='mb-[13vh] grid lg:grid-cols-3 grid-cols-1 mt-[7vh] self-center w-[90vw]'>
+        <a onClick={()=>{}} className='cursor-pointer text-[4vmin] m-[3vh] place-self-center'>RCE formula</a>
+        <a onClick={()=>{navigatee('/m')}} className='cursor-pointer text-[4vmin] m-[3vh] place-self-center'>AUE guides</a>
+        <a href={pdf3} className='cursor-pointer text-[4vmin] m-[3vh] place-self-center'>Information</a>
       </div>
       <div className='h-[50vh] flex flex-col'>
     <RareFishesClass/>
@@ -175,8 +179,28 @@ React.useEffect(() => {
   );
 }
 
+
+function PDFSS(){
+  return(
+    <div className="h-screen text-[3vh] text-[#] flex flex-col justify-center snap-proximity snap-y selection:bg-[#EDF6F9] selection:text-[#006D77] w-screen bg-[#006D77] text-[#ffffff]">
+      <div className='absolute select-none z-0 flex top-[33vh] left-[calc(50vw-17vh)]'>
+     <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
+     </div>
+     <div className='absolute select-none z-0 flex top-[33vh] left-[calc(20vw-17vh)]'>
+     <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
+     </div>
+    <a href={pdf1} className='h-[17vh] z-20 self-center bg-[#eeeeee40] hover:bg-[#eeeeee70] rounded-[2vh] p-[2vh] flex flex-col m-[3vh] justify-center w-[33vh] max-w-[90vw] text-center'>Survival Tips</a>
+    <a href={pdf2} className='h-[17vh] z-20 text-[calc(2vh+0.7vh)] self-center bg-[#eeeeee40] hover:bg-[#eeeeee70] rounded-[2vh] p-[2vh] flex flex-col m-[3vh] justify-center w-[33vh] max-w-[90vw] text-center'>A Field Guide to Common
+Wildlife Diseases and Parasites</a>
+    <a href={pdf3} className='h-[17vh] z-20 self-center bg-[#eeeeee40] hover:bg-[#eeeeee70] rounded-[2vh] p-[2vh] flex flex-col m-[3vh] justify-center w-[33vh] max-w-[90vw] text-center'>Rainforest survival guide</a>
+
+    </div>
+  )
+}
+
+
 export {
-  Overview, App}
+  Overview, App, PDFSS}
 
 
   function Overview(){
