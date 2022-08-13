@@ -155,7 +155,7 @@ React.useEffect(() => {
 }, []);
   return (
     <div className="h-auto snap-proximity snap-y pb-[33vh] selection:bg-[#EDF6F9] selection:text-[#006D77] w-screen bg-[#006D77] text-[#ffffff]">
-     <div className='absolute select-none z-0 flex top-[5vh] left-[calc(50vw-17vh)]'>
+     <div className='absolute select-none z-0 w-screen overflow-hidden flex top-[5vh] left-[calc(50vw-17vh)]'>
      <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/ko27I/MAEoE-ko27I/1/s.png"/>
      </div>
      <div className='w-screen font-["Cherry_Swash"] flex flex-col z-20 relative'>
@@ -183,13 +183,13 @@ React.useEffect(() => {
 function PDFSS(){
   return(
     <div className="h-screen text-[3vh] text-[#] flex flex-col justify-center snap-proximity snap-y selection:bg-[#EDF6F9] selection:text-[#006D77] w-screen bg-[#006D77] text-[#ffffff]">
-      <div className='absolute select-none z-0 flex top-[33vh] left-[calc(50vw-17vh)]'>
+      <div className='absolute select-none z-0 w-screen overflow-hidden flex top-[33vh] left-[calc(50vw-17vh)]'>
      <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
      </div>
-     <div className='absolute select-none z-0 hidden md:flex top-[33vh] left-[calc(20vw-17vh)]'>
+     <div className='absolute select-none z-0 w-screen overflow-hidden hidden md:flex top-[33vh] left-[calc(20vw-17vh)]'>
      <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
      </div>
-     <div className='absolute select-none z-0 hidden md:flex top-[33vh] right-[calc(20vw-17vh)]'>
+     <div className='absolute select-none z-0 w-screen overflow-hidden hidden md:flex top-[33vh] right-[calc(20vw-17vh)]'>
      <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
      </div>
     <a href={pdf1} className='h-[17vh] z-20 self-center bg-[#eeeeee40] hover:bg-[#eeeeee70] rounded-[2vh] p-[2vh] flex flex-col m-[3vh] justify-center w-[33vh] max-w-[90vw] text-center'>Survival Tips</a>

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e098a61.css",
-    "main.js": "/static/js/main.6efc2223.js",
+    "main.css": "/static/css/main.342b5761.css",
+    "main.js": "/static/js/main.f213f6cc.js",
     "static/media/04_Survival_Tips.pdf": "/static/media/04_Survival_Tips.4c83513443246d3292ef.pdf",
     "static/media/WJ-Friday-15th-January_-Survival-Guide.pdf": "/static/media/WJ-Friday-15th-January_-Survival-Guide.19b7feb5c5a2e5f11659.pdf",
     "static/media/field_guide_wildlife_diseases.pdf": "/static/media/field_guide_wildlife_diseases.de271021ada2066733cf.pdf",
@@ -10,7 +10,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.0e098a61.css",
-    "static/js/main.6efc2223.js"
+    "static/css/main.342b5761.css",
+    "static/js/main.f213f6cc.js"
   ]
 }
