@@ -162,7 +162,7 @@ React.useEffect(() => {
       </div>
       
       <div id="Hs" className='snap-start pb-[17vh] overflow-y-scroll h-screen w-screen flex flex-col justify-start'>
-      <p className='select-all mt-[17vh] font-["Cherry_Swash"] w-[100vh] self-center text-justify text-[3vh]'>AUE (Animal Uprising Event) is the name for upcoming incidents where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.</p>
+      <p className='select-all mt-[17vh] font-["Cherry_Swash"] w-[100vh] max-w-[90vw] self-center text-justify text-[3vh]'>AUE (Animal Uprising Event) is the name for upcoming incidents where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.</p>
       <p className='select-all mb-[1vh] w-[100vh] font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is inmninent, preapare for the <a className='font-[Cinzel] font-thin text-[#E9C46A]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a> instead</p>
       <div className='flex flex-col'>
     <RareFishesClass/>
