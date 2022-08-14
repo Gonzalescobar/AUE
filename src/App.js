@@ -1,10 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import pdf1 from './04_Survival_Tips.pdf'
-import pdf2 from './field_guide_wildlife_diseases.pdf'
-import pdf3 from './WJ-Friday-15th-January_-Survival-Guide.pdf'
 import {useNavigate} from 'react-router-dom'
+import flower1 from './flower1.png'
 
 const collision = " Monkey Pox & COVID 19"
 
@@ -115,17 +112,17 @@ class RareFishesClass extends React.Component {
         <svg viewBox="0 0 900 300" className='h-[50vh] rounded-[1vh] max-h-[30vw] self-center bg-[#00000000]' xmlns="http://www.w3.org/2000/svg" version="1.1">
           <polyline className='stroke-[0.17%]' fill="#E9C46A" stroke="#E9C46A" points={this.state.polystring} />
         </svg>
-        <p className='sm:text-[3vh] text-[#ffffff] mt-[3vh]   text-[2.1vh] text-center self-center'>{"Current Risk: " + this.getPercentage() + "%"}</p>
-        <p className='sm:text-[3vh] text-[#ffffff] font-bold mt-[1vh] text-[2.1vh] text-center self-center'>{"Acumulated Risk during the last 24 hours: " + this.state.TFpercentage + "%"}</p>
-        <p className='sm:text-[3vh] text-[#ffffff] font-light mt-[1vh] flex flex-row text-[2.1vh] text-center self-center'><p className='font-bold mr-[1vh]'>Current Threats: </p>{" " + collision}</p>
+        <p className='sm:text-[3vh] text-[#444444] mt-[3vh]   text-[2.1vh] text-center self-center'>{"Current Risk: " + this.getPercentage() + "%"}</p>
+        <p className='sm:text-[3vh] text-[#444444] font-bold mt-[1vh] text-[2.1vh] text-center self-center'>{"Acumulated Risk during the last 24 hours: " + this.state.TFpercentage + "%"}</p>
+        <p className='sm:text-[3vh] text-[#444444] font-light mt-[1vh] flex flex-row text-[2.1vh] text-center self-center'><p className='font-bold mr-[1vh]'>Current Threats: </p>{" " + collision}</p>
         <div className='flex cursor-default mt-[1vh] flex-row justify-center'>
-          <p className='sm:text-[3vh] text-[#ffffff] text-[2.1vh] m-[1vh] text-center self-center'>{this.getTimeArray(1)}</p>
-          <p className='sm:text-[3vh] text-[#ffffff] text-[2.1vh] m-[1vh] text-center self-center'>{this.getTimeArray(2)}</p>
-          <p className='sm:text-[3vh] text-[#ffffff] text-[2.1vh] m-[1vh] text-center self-center'>{this.getTimeArray(3)}</p>
-          <p className='sm:text-[3vh] text-[#ffffff] text-[2.1vh] m-[1vh] text-center self-center'>{this.getTimeArray(4)}</p>
-          <p className='sm:text-[3vh] text-[#ffffff] text-[2.1vh] m-[1vh] text-center self-center'>{"GMT"}</p>
+          <p className='sm:text-[3vh] text-[#444444] text-[2.1vh] m-[1vh] text-center self-center'>{this.getTimeArray(1)}</p>
+          <p className='sm:text-[3vh] text-[#444444] text-[2.1vh] m-[1vh] text-center self-center'>{this.getTimeArray(2)}</p>
+          <p className='sm:text-[3vh] text-[#444444] text-[2.1vh] m-[1vh] text-center self-center'>{this.getTimeArray(3)}</p>
+          <p className='sm:text-[3vh] text-[#444444] text-[2.1vh] m-[1vh] text-center self-center'>{this.getTimeArray(4)}</p>
+          <p className='sm:text-[3vh] text-[#444444] text-[2.1vh] m-[1vh] text-center self-center'>{"GMT"}</p>
         </div>
-        <p className='m-[3vh]  sm:text-[2.7vh] text-[#ffffff] text-[1.9vh] text-center self-center'>{"The standard risk of a random chimp event happening is 1/12 every 24 hours"}</p>
+        <p className='m-[3vh]  sm:text-[2.7vh] text-[#444444] text-[1.9vh] text-center self-center'>{"The standard risk of an Animal Uprising Event happening is 1/12 every 24 hours"}</p>
       </div>
     )
   }
@@ -154,56 +151,31 @@ React.useEffect(() => {
   return () => clearInterval(getProbability);
 }, []);
   return (
-    <div className="h-auto snap-proximity snap-y pb-[33vh] selection:bg-[#EDF6F9] selection:text-[#006D77] w-screen bg-[#006D77] text-[#ffffff]">
-     <div className='absolute select-none z-0 w-screen overflow-hidden flex top-[5vh] left-[calc(50vw-17vh)]'>
-     <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/ko27I/MAEoE-ko27I/1/s.png"/>
+    <div className="h-auto snap-proximity snap-y pb-[33vh] selection:bg-[#444444] selection:text-slate-100 w-screen bg-slate-200 text-[#4444444]">
+     <div className='absolute h-screen flex-col justify-center select-none z-0 w-screen overflow-hidden flex'>
+     <img className='w-[33vh] spin1deg self-center' src={flower1}/>
      </div>
      <div className='w-screen font-["Cherry_Swash"] flex flex-col z-20 relative'>
      <div onClick={()=>{document.getElementById("Hs").scrollIntoView()}} className='select-none snap-center h-screen w-screen flex flex-col justify-center'>
       <p className='mt-[5vh] text-[#E9C46A] text-center max-w-[80vw] select-none font-[Cinzel] font-thin self-center text-[5vh] md:text-[7vh] mb-[5vh]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</p>
       <p className='font-thin h-[5vh] self-center text-[5vmin]' id="probability">{(1/12).toFixed(5)+"%"}</p>
       </div>
-      <div id="Hs" className='snap-start overflow-y-scroll h-screen w-screen flex flex-col justify-start'>
-      <p className='select-all font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is inmninent but there are ways to preapare for the <a className='font-[Cinzel] font-thin text-[#E9C46A]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a></p>
-      <div className='mb-[13vh] grid lg:grid-cols-3 grid-cols-1 mt-[7vh] self-center w-[90vw]'>
-        <a onClick={()=>{}} className='cursor-pointer text-[4vmin] m-[3vh] place-self-center'>RCE formula</a>
-        <a onClick={()=>{navigatee('/m')}} className='cursor-pointer text-[4vmin] m-[3vh] place-self-center'>AUE guides</a>
-        <a href={pdf3} className='cursor-pointer text-[4vmin] m-[3vh] place-self-center'>Information</a>
-      </div>
-      <div className='h-[50vh] flex flex-col'>
+      
+      <div id="Hs" className='snap-start pb-[17vh] overflow-y-scroll h-screen w-screen flex flex-col justify-start'>
+      <p className='select-all mt-[17vh] font-["Cherry_Swash"] w-[100vh] self-center text-justify text-[3vh]'>AUE (Animal Uprising Event) is the name for upcoming incidents where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.</p>
+      <p className='select-all mb-[1vh] w-[100vh] font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is inmninent, preapare for the <a className='font-[Cinzel] font-thin text-[#E9C46A]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a> instead</p>
+      <div className='flex flex-col'>
     <RareFishesClass/>
 </div>
-      </div>
+     </div>
      </div>
     </div>
   );
 }
 
 
-function PDFSS(){
-  return(
-    <div className="h-screen text-[3vh] text-[#] flex flex-col justify-center snap-proximity snap-y selection:bg-[#EDF6F9] selection:text-[#006D77] w-screen bg-[#006D77] text-[#ffffff]">
-      <div className='absolute select-none z-0 w-screen overflow-hidden flex top-[33vh] left-[calc(50vw-17vh)]'>
-     <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
-     </div>
-     <div className='absolute select-none z-0 w-screen overflow-hidden hidden md:flex top-[33vh] left-[calc(20vw-17vh)]'>
-     <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
-     </div>
-     <div className='absolute select-none z-0 w-screen overflow-hidden hidden md:flex top-[33vh] right-[calc(20vw-17vh)]'>
-     <img className='w-[33vh] spin1deg' src="https://media-public.canva.com/WrI8w/MAFG0gWrI8w/1/s.svg"/>
-     </div>
-    <a href={pdf1} className='h-[17vh] z-20 self-center bg-[#eeeeee40] hover:bg-[#eeeeee70] rounded-[2vh] p-[2vh] flex flex-col m-[3vh] justify-center w-[33vh] max-w-[90vw] text-center'>Survival Tips</a>
-    <a href={pdf2} className='h-[17vh] z-20 text-[calc(2vh+0.7vh)] self-center bg-[#eeeeee40] hover:bg-[#eeeeee70] rounded-[2vh] p-[2vh] flex flex-col m-[3vh] justify-center w-[33vh] max-w-[90vw] text-center'>A Field Guide to Common
-Wildlife Diseases and Parasites</a>
-    <a href={pdf3} className='h-[17vh] z-20 self-center bg-[#eeeeee40] hover:bg-[#eeeeee70] rounded-[2vh] p-[2vh] flex flex-col m-[3vh] justify-center w-[33vh] max-w-[90vw] text-center'>Rainforest survival guide</a>
-
-    </div>
-  )
-}
-
-
 export {
-  Overview, App, PDFSS}
+  Overview, App, }
 
 
   function Overview(){
@@ -216,7 +188,7 @@ export {
 Qrab & Nell consultants have linked Christianity, with the only known effective way to survive an Animal Uprising Event.
 </p>
 <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vh]'>
-A random chimp event is an Animal Uprising Event that's mostly asociated with primates.
+an Animal Uprising Event is an Animal Uprising Event that's mostly asociated with primates.
 </p>
 <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vh]'>
 The onlly known mathematical equation that can predict an Animal Uprising event is:
