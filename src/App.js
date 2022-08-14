@@ -188,7 +188,7 @@ React.useEffect(async () => {
       <div className='flex flex-col'>
     <RareFishesClass/>
 </div>
-<p id="Formula" className='select-all mb-[1vh] w-[100vh] font-["Ewert"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>AUE Formula</p>
+<p id="Formula" className='select-all mb-[1vh] pt-[7vh] w-[100vh] font-["Ewert"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>AUE Formula</p>
 <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vmin]'>
 The basic idea of the AUE formula is that the hash of the current date plus the current global threat can predict the exact time when an Animal Uprising Event will happen. the sha256 hash of a UTF-8 string containing the current date + the expected hash collision separated by a space, in the format:
 </p>
