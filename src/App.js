@@ -110,7 +110,7 @@ class RareFishesClass extends React.Component {
       <div className='self-center w-screen h-auto flex flex-col cursor-default justify-center sm:m-0'>
         <p className='mb-[5vh] m-[1vh] text-center text-[2.5vh] sm:text-[3.7vh] font-extralight self-center'><a className='font-normal'>Animal uprising event </a>probability (Globally)</p>
         <svg viewBox="0 0 900 300" className='h-[50vh] rounded-[1vh] max-h-[30vw] self-center bg-[#00000000]' xmlns="http://www.w3.org/2000/svg" version="1.1">
-          <polyline className='stroke-[0.17%]' fill="#E9C46A" stroke="#E9C46A" points={this.state.polystring} />
+          <polyline className='stroke-[0.17%]' fill="#FF1053" stroke="#FF1053" points={this.state.polystring} />
         </svg>
         <p className='sm:text-[3vh] text-[#444444] mt-[3vh]   text-[2.1vh] text-center self-center'>{"Current Risk: " + this.getPercentage() + "%"}</p>
         <p className='sm:text-[3vh] text-[#444444] font-bold mt-[1vh] text-[2.1vh] text-center self-center'>{"Acumulated Risk during the last 24 hours: " + this.state.TFpercentage + "%"}</p>
@@ -157,13 +157,14 @@ React.useEffect(() => {
      </div>
      <div className='w-screen font-["Cherry_Swash"] flex flex-col z-20 relative'>
      <div onClick={()=>{document.getElementById("Hs").scrollIntoView()}} className='select-none snap-center h-screen w-screen flex flex-col justify-center'>
-      <p className='mt-[5vh] text-[#E9C46A] text-center max-w-[80vw] select-none font-[Cinzel] font-thin self-center text-[5vh] md:text-[7vh] mb-[5vh]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</p>
+      <p className='mt-[5vh] text-[#FF1053] text-center max-w-[80vw] select-none font-[Cinzel] font-thin self-center text-[5vh] md:text-[7vh] mb-[5vh]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</p>
       <p className='font-thin h-[5vh] self-center text-[5vmin]' id="probability">{(1/12).toFixed(5)+"%"}</p>
       </div>
       
       <div id="Hs" className='snap-start pb-[17vh] overflow-y-scroll h-screen w-screen flex flex-col justify-start'>
-      <p className='select-all mt-[17vh] font-["Cherry_Swash"] w-[100vh] max-w-[90vw] self-center text-justify text-[3.3vmin]'>AUE (Animal Uprising Event) is the name for upcoming incidents where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.</p>
-      <p className='select-all mb-[1vh] w-[100vh] font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is inmninent, preapare for the <a className='font-[Cinzel] font-thin text-[#E9C46A]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a> instead</p>
+      <p className='select-all mt-[17vh] font-["Cherry_Swash"] w-[100vh] max-w-[90vw] self-center text-justify text-[4vmin] md:text-[3.3vmin]'>AUE (Animal Uprising Event) is the name for upcoming incidents where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.
+      <p>Probability Form</p></p>
+      <p className='select-all mb-[1vh] w-[100vh] font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is inmninent, preapare for the <a className='font-[Cinzel] font-thin text-[#FF1053]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a> instead.</p>
       <div className='flex flex-col'>
     <RareFishesClass/>
 </div>
@@ -181,7 +182,7 @@ export {
   function Overview(){
     return(
       <div>
-     <p className='select-all font-["Cherry_Swash"] max-w-[90vw] self-center text-justify text-[3vh]'>Do not panic, it is inmninent but there are ways to preapare for the <a className='font-[Cinzel] font-thin text-[#E9C46A]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a></p>
+     <p className='select-all font-["Cherry_Swash"] max-w-[90vw] self-center text-justify text-[3vh]'>Do not panic, it is inmninent but there are ways to preapare for the <a className='font-[Cinzel] font-thin text-[#FF1053]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a></p>
      <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vh]'>AUE (Animal Uprising Event) is the name for imminent upcoming events where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.
 </p>
 <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vh]'>
@@ -204,5 +205,4 @@ The sha256 hash of a UTF-8 string containing the current date in the format:
 Plus a UTF-8 string of any current threat asociated with animals, such as 'COVID-19' or 'Monkey Pox'
 </p>
       </div>
-    )
-  }
+  
