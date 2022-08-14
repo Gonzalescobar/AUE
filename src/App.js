@@ -53,7 +53,7 @@ class RareFishesClass extends React.Component {
     if (this.state.data.length < 900) {
       for (let nm = 900; nm > 0; nm = nm - 1) {
         let ProbabilityString = new Date(Math.floor(Math.floor(Date.now() + this.timeChange - 1000 * nm) / 1000) * 1000).toUTCString().replace(" GMT", "")
-        tempArray.push({ "Probability": await this.returnHashNumberWeighted(ProbabilityString + collision), "Time": ProbabilityString })
+        tempArray.push({ "Probability": await this.returnHashNumberWeighted(ProbabilityString.toUpperCase() + collision), "Time": ProbabilityString })
       }
 
 
@@ -61,7 +61,7 @@ class RareFishesClass extends React.Component {
     } else {
       tempArray = this.state.data; tempArray.shift()
       let ProbabilityString = new Date(Math.floor(Math.floor(Date.now()) / 1000) * 1000).toUTCString().replace(" GMT", "")
-      tempArray.push({ "Probability": await this.returnHashNumberWeighted(ProbabilityString + collision), "Time": ProbabilityString })
+      tempArray.push({ "Probability": await this.returnHashNumberWeighted(ProbabilityString.toUpperCase() + collision), "Time": ProbabilityString })
     }
     this.getPolyString()
     this.get24Percentage()
@@ -80,7 +80,8 @@ class RareFishesClass extends React.Component {
   async get24Percentage() {
     let ProbabilityString = new Date(Math.floor(Math.floor(Date.now() + this.timeChange) / 10000) * 10000).toUTCString().replace(" GMT", "")
     ProbabilityString = ProbabilityString.replace(" " + ProbabilityString.split(" ")[4], "")
-    let tempInt = parseFloat(await this.returnHashNumberWeightedDaily(ProbabilityString + collision))
+    console.log(ProbabilityString)
+    let tempInt = parseFloat(await this.returnHashNumberWeightedDaily(ProbabilityString.toUpperCase() + collision))
     this.setState({ TFpercentage: tempInt })
   }
 
@@ -103,6 +104,8 @@ class RareFishesClass extends React.Component {
       return "     "
     }
   }
+
+
 
   render() {
     return (
@@ -136,19 +139,35 @@ async function returnHashNumberWeighted(ProbabilityString) {
   return ((100 / 12) + (100 - (100 / 12)) / factor).toFixed(5)
 }
 
+async function returnHashOnly(ProbabilityString) {
+  let utf8Encode = new TextEncoder();
+  return await crypto.subtle.digest("sha-256", utf8Encode.encode(ProbabilityString))
+   
+}
+
+/* global BigInt */
 
 
 function App() {
 
+const [datee, setDate] = React.useState(new Date(Math.floor(Math.floor(Date.now() - 1000 * 1) / 1000) * 1000).toUTCString().replace(" GMT", "").toUpperCase())
+
+
   const navigatee = useNavigate();
 
-React.useEffect(() => {
+React.useEffect(async () => {
+
+  document.getElementById('RTHD').innerText =   [...new Uint8Array(await returnHashOnly(datee + collision))].map(x => x.toString(16).padStart(2, '0')).join('')
+  document.getElementById('RTHDD').innerText =  BigInt(parseInt([...new Uint8Array(await returnHashOnly(datee + collision))].map(x => x.toString(16).padStart(2, '0')).join(''), 16))
+
+    console.log(BigInt(parseInt([...new Uint8Array(await returnHashOnly(datee + collision))].map(x => x.toString(16).padStart(2, '0')).join(''), 16)))
+
   const getProbability = setInterval(async () => {
     let ProbabilityString = new Date(Math.floor(Math.floor(Date.now()) / 1000) * 1000).toUTCString().replace(" GMT", "")
-    let probb = (await returnHashNumberWeighted(ProbabilityString + collision))
+    let probb = (await returnHashNumberWeighted(ProbabilityString.toUpperCase() + collision))
     document.getElementById('probability').innerText = probb + "%"
   }, 1000);
-  return () => clearInterval(getProbability);
+  return () => {clearInterval(getProbability);}
 }, []);
   return (
     <div className="h-auto snap-proximity snap-y pb-[33vh] selection:bg-[#444444] selection:text-slate-100 w-screen bg-slate-200 text-[#4444444]">
@@ -169,6 +188,32 @@ React.useEffect(() => {
       <div className='flex flex-col'>
     <RareFishesClass/>
 </div>
+<p className='select-all mb-[1vh] w-[100vh] font-["Ewert"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>AUE Formula</p>
+<p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vmin]'>
+The basic idea of the AUE formula is that the hash of the current date plus the current global threat can predict the exact time when an Animal Uprising Event will happen. the sha256 hash of a UTF-8 string containing the current date + the expected hash collision separated by a space, in the format:
+</p>
+<p className='bg-[#FCA311] p-[1vh] rounded-[1vh] select-all mt-[3vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vmin]'>
+[3 letter english day string, (all uppercase)], [dd] [3 letter english month string, (all uppercase)]  [yyyy] [hh]:[mm]:[ss] [expected collision sring]
+</p>
+<p className='bg-[#FCA311] p-[1vh] rounded-[1vh] mt-[3vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-center text-[3vmin]'>
+Ex: {datee} {collision} <p>&rarr;</p>
+<p className='text-[2vmin]' id="RTHD"></p>
+<p>&rarr;</p>
+<p className='text-[2vmin]' id="RTHDD"></p>
+</p>
+
+<p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vmin]'>
+Then the resulting hash, plugged into this equation:
+</p>
+<p className='bg-[#FCA311] p-[1vh] rounded-[1vh] select-all mt-[3vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vmin]'>
+((100 / 12) + (100 - (100 / 12)) / ((1 + ((100 / 12) ** (2)) * [hash] / 16 ** 64) ** 2) )
+</p>
+<p className='bg-[#FCA311] p-[1vh] rounded-[1vh] mt-[3vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-center text-[3vmin]'>
+Proves that the lower the hash, the bigger the probability of an Animal Uprising Event happening.
+</p>
+
+
+
      </div>
      </div>
     </div>
