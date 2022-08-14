@@ -180,15 +180,15 @@ React.useEffect(async () => {
       <p className='font-thin h-[5vh] self-center text-[5vmin]' id="probability">{(1/12).toFixed(5)+"%"}</p>
       </div>
       
-      <div id="Hs" className='snap-start pb-[17vh] overflow-y-scroll h-screen w-screen flex flex-col justify-start'>
+      <div id="Hs" className='snap-start scroll-smooth pb-[17vh] overflow-y-scroll h-screen w-screen flex flex-col justify-start'>
       <p className='select-all mt-[17vh] font-["Cherry_Swash"] w-[100vh] max-w-[90vw] self-center text-justify text-[4vmin] md:text-[3.3vmin]'>AUE (Animal Uprising Event) is the name for upcoming incidents where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.
      </p>
-     <button className='p-[1vh] bg-[#FF1053] text-slate-100 mt-[5vh] rounded-[2vmin] ml-[5vmin] text-[3vmin] md:self-center w-[37vmin]'>Probability Formula &rarr;</button>
+     <button onClick={()=>{document.getElementById('Formula').scrollIntoView()}} className='p-[1vh] bg-[#FF1053] text-slate-100 mt-[5vh] rounded-[2vmin] ml-[5vmin] text-[3vmin] md:self-center w-[44vmin]'>Probability Formula &rarr;</button>
       <p className='select-all mb-[1vh] w-[100vh] font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is inmninent, preapare for the <a className='font-[Cinzel] font-thin text-[#FF1053]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a> instead.</p>
       <div className='flex flex-col'>
     <RareFishesClass/>
 </div>
-<p className='select-all mb-[1vh] w-[100vh] font-["Ewert"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>AUE Formula</p>
+<p id="Formula" className='select-all mb-[1vh] w-[100vh] font-["Ewert"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>AUE Formula</p>
 <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vmin]'>
 The basic idea of the AUE formula is that the hash of the current date plus the current global threat can predict the exact time when an Animal Uprising Event will happen. the sha256 hash of a UTF-8 string containing the current date + the expected hash collision separated by a space, in the format:
 </p>
