@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.7fd76ea6.css",
-    "main.js": "/static/js/main.21c98657.js",
+    "main.js": "/static/js/main.b8704204.js",
     "service-worker.js": "/service-worker.js",
     "static/media/flower1.png": "/static/media/flower1.01a6cb2736b68a908c9f.png",
     "index.html": "/index.html"
   },
   "entrypoints": [
     "static/css/main.7fd76ea6.css",
-    "static/js/main.21c98657.js"
+    "static/js/main.b8704204.js"
   ]
 }

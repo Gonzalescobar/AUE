@@ -181,7 +181,7 @@ React.useEffect(async () => {
       </div>
       
       <div id="Hs" className='snap-start scroll-smooth pb-[17vh] overflow-y-scroll h-screen w-screen flex flex-col justify-start'>
-      <p className='select-all mt-[17vh] font-["Cherry_Swash"] w-[100vh] max-w-[90vw] self-center text-justify text-[4vmin] md:text-[3.3vmin]'>AUE (Animal Uprising Event) is the name for upcoming incidents where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.
+      <p className='select-all mt-[17vh] font-["Cherry_Swash"] w-[100vh] max-w-[90vw] self-center text-justify text-[4vmin] md:text-[3.3vmin]'>AUE (Animal Uprising Event) is the name for upcoming incidents where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution, and abuse.
      </p>
      <button onClick={()=>{document.getElementById('Formula').scrollIntoView()}} className='p-[1vh] bg-[#FF1053] text-slate-100 mt-[5vh] rounded-[2vmin] ml-[5vmin] text-[3vmin] md:self-center w-[44vmin]'>Probability Formula &rarr;</button>
       <p className='select-all mb-[1vh] w-[100vh] font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is imminent, prepare for <a className='font-[Cinzel] font-thin text-[#FF1053]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a> instead.</p>
@@ -229,7 +229,7 @@ export {
     return(
       <div>
      <p className='select-all font-["Cherry_Swash"] max-w-[90vw] self-center text-justify text-[3vh]'>Do not panic, it is imminent but there are ways to prepare for the <a className='font-[Cinzel] font-thin text-[#FF1053]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a></p>
-     <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vh]'>AUE (Animal Uprising Event) is the name for imminent upcoming events where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.
+     <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vh]'>AUE (Animal Uprising Event) is the name for imminent upcoming events where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution, and abuse.
 </p>
 <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vh]'>
 Qrab & Nell consultants have linked Christianity, with the only known effective way to survive an Animal Uprising Event.
