@@ -116,7 +116,7 @@ class RareFishesClass extends React.Component {
           <polyline className='stroke-[0.17%]' fill="#FF1053" stroke="#FF1053" points={this.state.polystring} />
         </svg>
         <p className='sm:text-[3vh] text-[#444444] mt-[3vh]   text-[2.1vh] text-center self-center'>{"Current Risk: " + this.getPercentage() + "%"}</p>
-        <p className='sm:text-[3vh] text-[#444444] font-bold mt-[1vh] text-[2.1vh] text-center self-center'>{"Acumulated Risk during the last 24 hours: " + this.state.TFpercentage + "%"}</p>
+        <p className='sm:text-[3vh] text-[#444444] font-bold mt-[1vh] text-[2.1vh] text-center self-center'>{"Accumulated Risk during the last 24 hours: " + this.state.TFpercentage + "%"}</p>
         <p className='sm:text-[3vh] text-[#444444] font-light mt-[1vh] flex flex-row text-[2.1vh] text-center self-center'><p className='font-bold mr-[1vh]'>Current Threats: </p>{" " + collision}</p>
         <div className='flex cursor-default mt-[1vh] flex-row justify-center'>
           <p className='sm:text-[3vh] text-[#444444] text-[2.1vh] m-[1vh] text-center self-center'>{this.getTimeArray(1)}</p>
@@ -184,7 +184,7 @@ React.useEffect(async () => {
       <p className='select-all mt-[17vh] font-["Cherry_Swash"] w-[100vh] max-w-[90vw] self-center text-justify text-[4vmin] md:text-[3.3vmin]'>AUE (Animal Uprising Event) is the name for upcoming incidents where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.
      </p>
      <button onClick={()=>{document.getElementById('Formula').scrollIntoView()}} className='p-[1vh] bg-[#FF1053] text-slate-100 mt-[5vh] rounded-[2vmin] ml-[5vmin] text-[3vmin] md:self-center w-[44vmin]'>Probability Formula &rarr;</button>
-      <p className='select-all mb-[1vh] w-[100vh] font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is inmninent, preapare for the <a className='font-[Cinzel] font-thin text-[#FF1053]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a> instead.</p>
+      <p className='select-all mb-[1vh] w-[100vh] font-["Cherry_Swash"] mt-[17vh] max-w-[90vw] self-center text-[4vmin] text-center'>Do not panic, it is imminent, prepare for <a className='font-[Cinzel] font-thin text-[#FF1053]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a> instead.</p>
       <div className='flex flex-col'>
     <RareFishesClass/>
 </div>
@@ -203,7 +203,7 @@ Ex: {datee} {collision} <p>&rarr;</p>
 </p>
 
 <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vmin]'>
-Then the resulting hash, plugged into this equation:
+Then the resulting hash is plugged into this equation:
 </p>
 <p className='bg-[#FCA311] p-[1vh] rounded-[1vh] select-all mt-[3vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vmin]'>
 ((100 / 12) + (100 - (100 / 12)) / ((1 + ((100 / 12) ** (2)) * [hash] / 16 ** 64) ** 2) )
@@ -228,7 +228,7 @@ export {
   function Overview(){
     return(
       <div>
-     <p className='select-all font-["Cherry_Swash"] max-w-[90vw] self-center text-justify text-[3vh]'>Do not panic, it is inmninent but there are ways to preapare for the <a className='font-[Cinzel] font-thin text-[#FF1053]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a></p>
+     <p className='select-all font-["Cherry_Swash"] max-w-[90vw] self-center text-justify text-[3vh]'>Do not panic, it is imminent but there are ways to prepare for the <a className='font-[Cinzel] font-thin text-[#FF1053]'>The  <a className='font-black'>A</a>nimal  <a className='font-black'>U</a>prising  <a className='font-black'>E</a>vent</a></p>
      <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vh]'>AUE (Animal Uprising Event) is the name for imminent upcoming events where animals will try to overcome humans for various reasons, including: destroying their natural habitats, deforestation, environmental pollution and abuse.
 </p>
 <p className='select-all mt-[7vh] font-["Cherry_Swash"] md:max-w-[70vw] max-w-[90vw] self-center text-justify text-[3vh]'>
